@@ -360,8 +360,7 @@ async function init(){
   const saved=localStorage.getItem('cc-theme');
   if(saved!==null)applyTheme(+saved);
   buildBmPanel();
-  const savedPage=localStorage.getItem('cc-page');
-  if(savedPage&&+savedPage>1&&+savedPage<=TS)sp=+savedPage;
+  // 링크 진입 시 항상 1펼침부터 시작 (localStorage 자동 복귀 비활성화)
   fitW();
 }
 
